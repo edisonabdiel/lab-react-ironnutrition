@@ -6,7 +6,8 @@ class AddNewFoods extends React.Component {
         image: "",
         name: "",
         calories: {
-            type: Number
+            type: Number,
+            value: 0
         }
     }
 
@@ -47,7 +48,8 @@ class AddNewFoods extends React.Component {
             image: "",
             name: "",
             calories: {
-                type: Number
+                type: Number,
+                value: 0
             }
         });
 
@@ -59,9 +61,9 @@ class AddNewFoods extends React.Component {
         return (
             <div className="">
             <form onSubmit={this.formSubmitHandler}>
-                {/* image: <input name="image" value={this.state.image} onChange={this.addImageHandler}></input> */}
-            Food Name: <input type="text" name="name" value={this.state.name} onChange={this.nameChangeHandler}></input>
-            Amount of Calories: <input type="number" name="calories" value={this.state.calories} onChange={this.caloriesChangeHandler}></input>
+                {/* image: <input name="image" placeholder="img" value={this.state.image} onChange={this.addImageHandler}></input> */}
+            Food Name: <input type="text" placeholder="food" name="name" value={this.state.name} onChange={this.nameChangeHandler}></input>
+            Amount of Calories: <input type="number" placeholder="0" name="calories" value={this.state.calories} onChange={this.caloriesChangeHandler}></input>
               <button type="submit">Save</button>
             </form>
           </div>
